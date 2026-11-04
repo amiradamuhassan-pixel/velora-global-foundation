@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071525">
+<title>VELORA GLOBAL FOUNDATION | Leadership</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--navy:#071525;
+--gold:#d9b568;
+--white:#ffffff;
+--muted:#aab8c8;
+--panel:#10243a;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--navy);
+color:white;
+overflow-x:hidden;
+}
+
+header{
+padding:20px 7%;
+display:flex;
+align-items:center;
+gap:18px;
+border-bottom:1px solid #ffffff18;
+background:#071525;
+}
+
+.logo{
+width:75px;
+height:75px;
+border-radius:50%;
+object-fit:contain;
+background:white;
+padding:4px;
+}
+
+.brand h1{
+font-family:'Playfair Display',serif;
+font-size:clamp(17px,4vw,27px);
+color:var(--gold);
+letter-spacing:2px;
+}
+
+.brand p{
+font-size:10px;
+letter-spacing:3px;
+color:#d5dce5;
+margin-top:5px;
+}
+
+.ticker{
+background:#10243a;
+padding:12px 0;
+overflow:hidden;
+white-space:nowrap;
+color:var(--gold);
+font-size:12px;
+letter-spacing:2px;
+}
+
+.ticker span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 25s linear infinite;
+}
+
+@keyframes scroll{
+to{transform:translateX(-100%)}
+}
+
+.hero{
+padding:65px 20px 30px;
+text-align:center;
+}
+
+.tag{
+color:var(--gold);
+font-size:11px;
+letter-spacing:4px;
+font-weight:600;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(32px,6vw,55px);
+margin:17px 0;
+}
+
+.hero h2 span{color:var(--gold)}
+
+.hero p{
+max-width:750px;
+margin:auto;
+color:var(--muted);
+font-size:14px;
+line-height:2;
+}
+
+/* 3D EARTH */
+
+.earth-section{
+padding:35px 15px 65px;
+text-align:center;
+}
+
+.earth-section h3{
+color:var(--gold);
+font-family:'Playfair Display',serif;
+font-size:25px;
+margin-bottom:10px;
+}
+
+.earth-section p{
+font-size:12px;
+color:var(--muted);
+}
+
+#earth-container{
+width:100%;
+height:380px;
+max-width:500px;
+margin:10px auto 0;
+position:relative;
+}
+
+#earth-container canvas{
+width:100%;
+height:100%;
+display:block;
+}
+
+.leadership{
+padding:60px 7%;
+background:#0b1d30;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title small{
+color:var(--gold);
+letter-spacing:4px;
+font-size:11px;
+}
+
+.section-title h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(27px,5vw,42px);
+margin-top:12px;
+}
+
+.leader-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+max-width:1150px;
+margin:auto;
+}
+
+.leader-card{
+background:linear-gradient(145deg,#142c45,#0b192a);
+border:1px solid #d9b56835;
+border-radius:17px;
+overflow:hidden;
+transition:.4s;
+}
+
+.leader-card:hover{
+transform:translateY(-9px);
+border-color:var(--gold);
+box-shadow:0 15px 35px #0006;
+}
+
+.photo-frame{
+height:300px;
+background:#142b40;
+overflow:hidden;
+}
+
+.photo-frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.leader-card:hover img{
+transform:scale(1.05);
+}
+
+.leader-info{
+padding:25px 22px;
+text-align:center;
+}
+
+.number{
+color:var(--gold);
+font-size:11px;
+letter-spacing:3px;
+}
+
+.leader-info h3{
+font-family:'Playfair Display',serif;
+font-size:22px;
+margin:12px 0 8px;
+}
+
+.role{
+color:var(--gold);
+font-size:11px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+.leader-info p{
+color:#b8c4d1;
+font-size:12px;
+line-height:2;
+margin-top:18px;
+}
+
+.speech{
+padding:65px 8%;
+background:#071525;
+}
+
+.speech-box{
+max-width:950px;
+margin:auto;
+padding:35px;
+border-left:3px solid var(--gold);
+background:#10243a;
+border-radius:0 15px 15px 0;
+margin-bottom:25px;
+}
+
+.speech-box h3{
+font-family:'Playfair Display',serif;
+color:var(--gold);
+font-size:23px;
+margin-bottom:15px;
+}
+
+.speech-box h4{
+font-size:12px;
+letter-spacing:2px;
+margin:20px 0 8px;
+color:#e3c889;
+}
+
+.speech-box p{
+font-size:13px;
+line-height:2.1;
+color:#c5d0dc;
+}
+
+.mission{
+padding:65px 8%;
+text-align:center;
+background:#10243a;
+}
+
+.mission h2{
+font-family:'Playfair Display',serif;
+font-size:32px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.mission p{
+max-width:800px;
+margin:auto;
+color:#c1cedb;
+font-size:13px;
+line-height:2.2;
+}
+
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+max-width:900px;
+margin:35px auto 0;
+}
+
+.value{
+padding:20px 10px;
+border:1px solid #d9b56855;
+border-radius:10px;
+color:var(--gold);
+font-size:12px;
+}
+
+footer{
+padding:40px 15px;
+text-align:center;
+background:#040d17;
+}
+
+footer h2{
+font-family:'Playfair Display',serif;
+color:var(--gold);
+letter-spacing:3px;
+}
+
+footer p{
+color:#8798a9;
+font-size:11px;
+margin-top:12px;
+line-height:2;
+}
+
+@media(max-width:600px){
+header{padding:15px 5%}
+.logo{width:60px;height:60px}
+.photo-frame{height:280px}
+.speech-box{padding:24px 18px}
+#earth-container{height:300px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="velora-global-foundation.png"
+alt="VELORA GLOBAL FOUNDATION Logo" class="logo">
+
+<div class="brand">
+<h1>VELORA GLOBAL</h1>
+<p>FOUNDATION</p>
+</div>
+</header>
+
+<div class="ticker">
+<span>
+ONE VISION. ONE PEOPLE. ONE FUTURE.
+&nbsp;&nbsp; | &nbsp;&nbsp;
+TOUCHING LIVES, EMPOWERING COMMUNITIES,
+BUILDING A LASTING LEGACY.
+</span>
+</div>
+
+<section class="hero">
+<div class="tag">OUR LEADERSHIP</div>
+
+<h2>Meet The <span>Leadership Team</span></h2>
+
+<p>
+At VELORA GLOBAL FOUNDATION, we believe that meaningful
+change begins with visionary leadership, unity, compassion
+and a shared commitment to humanity.
+
+We are committed to building a better future through
+education, youth empowerment, humanitarian support
+and sustainable community development.
+</p>
+</section>
+
+<!-- REAL 3D ROTATING EARTH -->
+
+<section class="earth-section">
+<h3>One World. One Humanity.</h3>
+<p>United Beyond Borders, Working Towards A Better Future.</p>
+
+<div id="earth-container"></div>
+</section>
+
+<!-- LEADERSHIP PROFILES -->
+
+<section class="leadership">
+
+<div class="section-title">
+<small>THE PEOPLE BEHIND THE VISION</small>
+<h2>Our Distinguished Leaders</h2>
+</div>
+
+<div class="leader-grid">
+
+<!-- LEADER 1 -->
+
+<div class="leader-card">
+<div class="photo-frame">
+<img src="velora1.jpg"
+alt="Executive Chairperson"
+onerror="this.style.opacity='.15'">
+</div>
+
+<div class="leader-info">
+<div class="number">01 — FIRST LEADERSHIP</div>
+
+<h3>Khadija Hassan Muhammad</h3>
+
+<div class="role">EXECUTIVE CHAIRPERSON</div>
+
+<p>
+Providing visionary leadership, strategic direction
+and institutional guidance towards achieving the
+foundation's mission and long-term objectives.
+</p>
+</div>
+</div>
+
+<!-- LEADER 2 -->
+
+<div class="leader-card">
+<div class="photo-frame">
+<img src="velora2.png"
+alt="Vice Chairperson"
+onerror="this.style.opacity='.15'">
+</div>
+
+<div class="leader-info">
+<div class="number">02 — SECOND LEADERSHIP</div>
+
+<h3>Amir Adamu Hassan</h3>
+
+<div class="role">VICE CHAIRPERSON</div>
+
+<p>
+Supporting the foundation's leadership, strengthening
+strategic partnerships and contributing to the effective
+implementation of its vision and programmes.
+</p>
+</div>
+</div>
+
+<!-- LEADER 3 -->
+
+<div class="leader-card">
+<div class="photo-frame">
+<img src="velora3.jpg"
+alt="Chief Programmes Director"
+onerror="this.style.opacity='.15'">
+</div>
+
+<div class="leader-info">
+<div class="number">03 — THIRD LEADERSHIP</div>
+
+<h3>Khadija Bintu Umar</h3>
+
+<div class="role">CHIEF PROGRAMMES DIRECTOR</div>
+
+<p>
+Leading programme development, coordinating initiatives
+and supporting the delivery of impactful projects
+that improve lives and empower communities.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- LEADERSHIP MESSAGES -->
+
+<section class="speech">
+
+<div class="section-title">
+<small>LEADERSHIP MESSAGES</small>
+<h2>Our Voices, Our Commitment</h2>
+</div>
+
+<!-- CHAIRPERSON -->
+
+<div class="speech-box">
+<h3>01. Executive Chairperson</h3>
+
+<h4>ENGLISH MESSAGE</h4>
+
+<p>
+Leadership is not simply about holding a position;
+it is about accepting responsibility, inspiring others
+and creating meaningful opportunities for positive change.
+
+At VELORA GLOBAL FOUNDATION, our vision is to build
+a strong and compassionate organisation that serves
+humanity, supports education, empowers young people
+and contributes to the development of our communities.
+
+Together, we can turn our shared vision into meaningful
+action and create a lasting legacy for future generations.
+</p>
+
+<h4>SAƘO A HAUSA</h4>
+
+<p>
+Shugabanci ba wai kawai rike mukami ba ne, alhaki ne,
+amana ne da kuma sadaukar da kai wajen taimakon al'umma.
+
+A matsayina na shugabar VELORA GLOBAL FOUNDATION,
+burina shi ne ganin mun gina gidauniya mai karfi,
+wadda za ta taimaki marasa galihu, inganta ilimi,
+karfafa matasa da kuma kawo ci gaba a cikin al'umma.
+
+Ina kira ga kowa da kowa da mu hada kai domin cimma
+wannan buri namu na alheri.
+</p>
+</div>
+
+<!-- VICE CHAIRPERSON -->
+
+<div class="speech-box">
+<h3>02. Vice Chairperson</h3>
+
+<h4>ENGLISH MESSAGE</h4>
+
+<p>
+I strongly believe that every meaningful achievement
+begins with a vision, determination and collective effort.
+
+As Vice Chairperson of VELORA GLOBAL FOUNDATION,
+I am committed to supporting our leadership, promoting
+unity, strengthening collaboration and contributing
+to programmes that create positive social impact.
+
+Our mission is bigger than individuals. It is about
+humanity, opportunity and building a future where
+everyone has the chance to make a difference.
+</p>
+
+<h4>SAƘO A HAUSA</h4>
+
+<p>
+Na yi imani cewa duk wani babban ci gaba yana farawa
+ne da hangen nesa, jajircewa da hadin kai.
+
+A matsayina na mataimakin shugaba, ina da kudurin
+taimakawa wajen tabbatar da manufofin wannan gidauniya,
+karfafa hadin kai, samar da kyakkyawar alaka da sauran
+kungiyoyi da kuma aiwatar da ayyukan da za su amfani
+al'umma.
+
+Babban burinmu shi ne mu zama sanadin alheri da
+canji mai kyau a rayuwar mutane.
+</p>
+</div>
+
+<!-- PROGRAMMES DIRECTOR -->
+
+<div class="speech-box">
+<h3>03. Chief Programmes Director</h3>
+
+<h4>ENGLISH MESSAGE</h4>
+
+<p>
+A vision becomes meaningful when it is transformed
+into action.
+
+As Chief Programmes Director, I believe in developing
+and coordinating initiatives that address real community
+needs, particularly in education, youth development,
+humanitarian support and community empowerment.
+
+Our responsibility is to ensure that our programmes
+create meaningful opportunities, reach the people
+who need them and contribute to sustainable development.
+</p>
+
+<h4>SAƘO A HAUSA</h4>
+
+<p>
+Hangen nesa yana da amfani ne idan aka mayar da shi
+aiki na zahiri.
+
+A matsayina na Daraktar shirye-shirye, na kuduri aniyar
+taimakawa wajen tsara shirye-shirye da ayyukan da za su
+magance matsalolin al'umma, musamman a fannin ilimi,
+ci gaban matasa, agajin jin kai da bunkasa al'umma.
+
+Muna son ganin ayyukanmu sun zama sanadin samun
+damammaki da ingantacciyar rayuwa ga al'umma.
+</p>
+</div>
+
+</section>
+
+<!-- FOUNDATION MISSION -->
+
+<section class="mission">
+
+<h2>Our Vision & Mission</h2>
+
+<p>
+VELORA GLOBAL FOUNDATION is an independent humanitarian
+and community development organisation committed to
+touching lives, empowering communities and building
+a lasting legacy.
+
+We believe in a world where education, compassion,
+equal opportunities and collective responsibility
+can transform lives and create a brighter future.
+</p>
+
+<div class="values">
+<div class="value">EDUCATION</div>
+<div class="value">HUMANITY</div>
+<div class="value">YOUTH EMPOWERMENT</div>
+<div class="value">COMMUNITY DEVELOPMENT</div>
+<div class="value">UNITY & SERVICE</div>
+</div>
+
+</section>
+
+<footer>
+<h2>VELORA GLOBAL FOUNDATION</h2>
+
+<p>
+ONE VISION. ONE PEOPLE. ONE FUTURE.
+<br>
+Touching Lives, Empowering Communities,
+Building a Lasting Legacy.
+<br><br>
+© 2026 VELORA GLOBAL FOUNDATION.
+All Rights Reserved.
+</p>
+</footer>
+
+<!-- THREE.JS REAL 3D GLOBE -->
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+const container = document.getElementById('earth-container');
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+45,
+container.clientWidth / container.clientHeight,
+0.1,
+100
+);
+
+camera.position.z = 3.2;
+
+const renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true
+});
+
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+renderer.setSize(
+container.clientWidth,
+container.clientHeight
+);
+
+container.appendChild(renderer.domElement);
+
+// EARTH SPHERE
+
+const geometry = new THREE.SphereGeometry(1,64,64);
+
+const loader = new THREE.TextureLoader();
+
+const earthMaterial = new THREE.MeshPhongMaterial({
+color:0xffffff,
+specular: new THREE.Color('#334455'),
+shininess:12
+});
+
+const earth = new THREE.Mesh(geometry,earthMaterial);
+
+scene.add(earth);
+
+// REAL EARTH MAP TEXTURE
+
+loader.load(
+'https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg',
+texture=>{
+earthMaterial.map=texture;
+earthMaterial.needsUpdate=true;
+},
+undefined,
+()=>{
+earthMaterial.color.set('#397da9');
+}
+);
+
+// LIGHTING
+
+const sunlight = new THREE.DirectionalLight(0xffffff,2.5);
+sunlight.position.set(5,3,5);
+scene.add(sunlight);
+
+const ambient = new THREE.AmbientLight(0x7799bb,1.1);
+scene.add(ambient);
+
+// BLUE ATMOSPHERE
+
+const atmosphere = new THREE.Mesh(
+new THREE.SphereGeometry(1.035,64,64),
+new THREE.MeshBasicMaterial({
+color:0x318bd8,
+transparent:true,
+opacity:0.10,
+side:THREE.BackSide
+})
+);
+
+scene.add(atmosphere);
+
+// STAR FIELD
+
+const starGeometry = new THREE.BufferGeometry();
+const starPositions=[];
+
+for(let i=0;i<1500;i++){
+starPositions.push(
+(Math.random()-.5)*30,
+(Math.random()-.5)*30,
+(Math.random()-.5)*30
+);
+}
+
+starGeometry.setAttribute(
+'position',
+new THREE.Float32BufferAttribute(starPositions,3)
+);
+
+const stars = new THREE.Points(
+starGeometry,
+new THREE.PointsMaterial({
+color:0xffffff,
+size:0.018
+})
+);
+
+scene.add(stars);
+
+// ANIMATION
+
+function animate(){
+requestAnimationFrame(animate);
+
+earth.rotation.y += 0.0018;
+atmosphere.rotation.y += 0.0018;
+stars.rotation.y += 0.0001;
+
+renderer.render(scene,camera);
+}
+
+animate();
+
+// RESPONSIVE SIZE
+
+window.addEventListener('resize',()=>{
+const width=container.clientWidth;
+const height=container.clientHeight;
+
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+
+renderer.setSize(width,height);
+});
+</script>
+
+</body>
+</html>
